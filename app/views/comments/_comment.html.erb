@@ -1,8 +1,12 @@
 <div>
     <strong><%= comment.name %> says: </strong>
     <%= comment.content %>
-     <div class="comment-admin">
-        <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
-        <%= link_to "Delete", [@post, comment], method: :delete %>
-    </div>
+    <% if current_user %>
+        <div class="comment-admin">
+            <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
+            <% if current_user && current_user.admin %>
+                <%= link_to "Delete", [@post, comment], method: :delete %>
+            <% end %>
+        </div>
+    <% end %>
 </div>
