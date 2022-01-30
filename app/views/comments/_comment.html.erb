@@ -1,12 +1,20 @@
-<div>
-    <strong><%= comment.name %> says: </strong>
-    <%= comment.content %>
-    <% if current_user %>
-        <div class="comment-admin">
-            <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
-            <% if current_user && current_user.admin %>
-                <%= link_to "Delete", [@post, comment], method: :delete %>
-            <% end %>
+<div class="comment-list" >
+    <div class="row">
+      <div>
+        <img style="width: 50px" src="https://i.ibb.co/CB3Yj2k/user.png" alt="user" border="0">
+      </div>
+      <div class="header-post-show-username">
+         <p style="font-size:20px; font-weight: 600"><%= comment.name %></p>
+         <p  style="font-size: 15px;"><%= comment.created_at.strftime("%b %e") %> </p>
+      </div>
+    </div>
+    <div style="margin-top: 20px;">
+        <%= comment.content %>
+    </div>
+    <div style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="float-right">
+            <%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |
+            <%= link_to "Delete", [@post, comment], method: :delete %>
         </div>
-    <% end %>
+    </div>    
 </div>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
-  root to: 'pages#home'
+  root to: 'posts#index'
 
   resources :users, :only =>[:index]
 

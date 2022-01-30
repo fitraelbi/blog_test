@@ -1,3 +1,64 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#body-post{
+    font-size: 25px;
+    line-height: 1.6;
+    margin-top: 40px;
+    font-family: medium-content-sans-serif-font;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.header-post-show{
+    margin-left: 20px;
+    margin: 30px;
+}
+
+.header-post-show-username{
+    line-height: 0.8;
+    // margin-top: 10px;
+    margin-left: 10px;
+}
+
+.header-post-show-username p{
+    margin: 5px;
+    padding: 0;
+       
+}
+
+#add-response{
+    width: 25vw;
+    height: 5vh;
+    margin-top: 2vh;
+    // border: 2px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
+    color: rgba(117, 117, 117, 1);
+    // padding-top: 1.5vh;
+    // padding-bottom: 3.5vh;
+    // cursor: pointer;
+    border-radius: 0px;
+    // background-color: green;
+}
+
+.modal-user{
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-comment{
+    height: 20vh;
+}
+
+.post-new{
+    margin-top: 7vh;
+    font-family: medium-content-sans-serif-font;
+}
+
+.new-post-title {
+    font-size: 30px;
+    color: rgba(117, 117, 117, 1);
+}
+

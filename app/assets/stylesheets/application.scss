@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+ a:-webkit-any-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(117, 117, 117, 1);
+    font-family: medium-content-sans-serif-font;
+    
+}
+
+ #nav {
+    border-bottom: 3px solid black;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    
+    }
+
+
+.link-register{
+    color: white;
+    font-weight: 600;
+    background-color: black; 
+    border-radius: 20px; 
+    padding: 10px; 
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+ }
+

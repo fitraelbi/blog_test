@@ -1,0 +1,22 @@
+<div id="nav">
+    <div class="container" >
+        <div class="row nav justify-content-between" style="margin-top: 30px; margin-bottom: 30px; padding: 0;">
+            <div class="col-4">
+                <h1><b><%= link_to "Blog", "/" %></b></h1>
+            </div>
+            <div class="col-4">
+                <div class="row" id="list-menu">
+                    <% if current_user %>
+                        <%= link_to 'New Post', new_post_path, :style => 'margin-right: 20px'; %>
+                        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+                    <% else %>
+                        <%= link_to 'Sign in', new_user_session_path, :class => 'link-login'  %>
+                        <div class="register">
+                            <%= link_to 'Get Started', new_user_registration_path, :class => 'link-register', :style => 'color: white'; %>
+                        </div>
+                    <% end %>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
